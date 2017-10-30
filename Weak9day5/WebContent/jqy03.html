@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#show').click(function(){
+			$('#img').fadeIn(2000)
+		});
+		$('#hide').click(function(){
+			$('#img').fadeOut(2000);
+		});
+		$('#toggle').click(function(){
+			$('#img').fadeToggle(2000);
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<input type="button" value="show" id="show">
+	<input type="button" value="hide" id="hide">
+	<input type="button" value="toggle" id="toggle">
+	<br>
+	<img src="images/ball.png" id="img">
+
+</body>
+</html>

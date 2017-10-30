@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제이 쿼리 유저 인터페이스 기초 </title>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<link rel="stylesheet" href="jquery-ui.min.css">
+<link rel="stylesheet" href="jquery-ui.theme.min.css">
+<link rel="stylesheet" href="jquery-ui.min.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$('#open-button').click(function () {
+			$('#dialog').dialog('open');
+		});
+		
+// 		다이얼록 플러긴
+		$('#dialog').dialog({
+			autoOpne: false,
+		  buttons: {
+		  submit : function() {
+			  var eventName = $('#event-name').val();
+			  var eventDate = $('#event-date').val();
+			  
+			  $('#event-name').val('');
+			  $('#event-date').val('');
+			  $('#dialog').dialog('close');
+		  }, 
+		  reset : function() { 
+			  $('#event-name').val('');
+			  $('#event-date').val('');
+		  },
+		  cancel : function() {  
+		  $('#event-name').val('');
+		  $('#event-date').val('');
+		  $('#dialog').dialog('close');
+		  }
+		  },
+	  modal : true
+	  });
+	  $('#event-date').datepicker( {
+		  dateFormat :'yy년 mm월 dd일',
+		  numberOfMonth : 3
+	  });
+  });
+  </script>
+  
+  <style>
+  body { font-size : 62.5%}
+  h1 { text-align : center; }
+  
+ input [type="text"], label {
+ margin-bottom : 12px; padding : .4em; width : 95%; }
+ 
+  </style>
+  
+</head>
+<body>
+
+
+<h1 id="open-button"> 일정생성 </h1>
+<hr/>
+<div id="ouput"></div>
+
+<!-- 다이얼로그 -->
+<div id="dialog" title="jQuery UI dialog">
+<h1> hello JQuriy UI</h1>
+<label for="event-name"> 일정이름 </label>
+<input id="event-name" type="text" /><br>
+<label for="event-date">날&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;짜</label>
+<input id="event-date" type="text" />
+</div>
+
+</body>
+</html>

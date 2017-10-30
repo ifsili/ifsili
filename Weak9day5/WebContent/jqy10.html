@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$('.inner-box').each(function(index){
+			$(this).css({
+				left: index * 90,
+				top : index * 90
+			});
+		});
+	});
+</script>
+
+<style type="text/css">
+	*{
+		margin:0px;
+		padding: 0px;
+	}
+	#canvas{
+		background: gray;
+		width: 600px;
+		height: 400px;
+		overflow: hidden;
+		position: relative;
+	}
+	.inner-box{
+		background: orange;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+	}
+</style>
+</head>
+
+<body>
+<h1>Hello</h1>
+<div id="canvas">
+	<div class="inner-box"></div>
+	<div class="inner-box"></div>
+	<div class="inner-box"></div>
+	<div class="inner-box"></div>
+	<div class="inner-box"></div>
+</div>
+<h1>Hello</h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제이 쿼리 유저 인터페이스 기초 </title>
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.10.3custom.css" />
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $('#dialog').dialog({
+		  submit : function() { }, 
+		  reset : function() {  },
+		  cancel : function() {  },
+	  });
+	  $('#event-date').datepicker();
+  });
+  </script>
+  
+  <style>
+  body { font-size : 62.5%}
+  h1 { text-align : center; }
+  
+ input [type="text"], label {
+ margin-bottom : 12px; padding : .4em; width : 95%; }
+ 
+  </style>
+  
+</head>
+<body>
+
+</body>
+</html>
